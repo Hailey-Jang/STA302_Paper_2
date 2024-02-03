@@ -1,1 +1,1 @@
-
+Article: Feldman, G., Farh, J., & Wong, K. F. E. (2018). Agency beliefs over time and across cultures: Free will beliefs predict higher work satisfaction. Personality and Social Psychology Bulletin, 44, 304–317. DOI: 10.1177/0146167217739261. [Article] [Preprint] [Open materials/data/code]
