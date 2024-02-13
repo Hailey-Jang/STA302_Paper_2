@@ -1,3 +1,4 @@
+# Belief in Free Will: A Catalyst for Long-Term Job Satisfaction in Workplace
 
 ## Overview
 This research investigates the enduring relationship between belief in personal freedom and job satisfaction through two longitudinal studies. These findings underscore the significance of embracing personal freedom for enhancing workplace contentment, offering actionable insights for individuals and organizations striving to improve well-being and productivity.
