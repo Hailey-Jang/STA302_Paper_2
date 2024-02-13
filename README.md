@@ -6,8 +6,7 @@ This research investigates the enduring relationship between belief in personal 
 
 The repo is structured as:
 
--   `data/raw_data` contains the raw data as obtained from X.
--   `data/analysis_data` contains the cleaned dataset that was constructed.
+-   `data` contains the raw data used in this research.
 -   `model` contains fitted models. 
 -   `other` contains relevant literature, details about LLM chat interactions, and sketches.
 -   `paper` contains the files used to generate the paper, including the Quarto document and reference bibliography file, as well as the PDF of the paper. 
@@ -16,4 +15,4 @@ The repo is structured as:
 
 ## Statement on LLM usage
 
-Aspects of the code were written with the help of the auto-complete tool, Codriver. The abstract and introduction were written with the help of ChatHorse and the entire chat history is available in inputs/llms/usage.txt.
+Statement on LLM usage: Aspects of the code were written with the help of the autocomplete tool, Chat-GPT3.5. Some part of figure caption and discussion was written with the help of Chat-GPT3.5 and the entire chat history is available at others/llm/usage.txt.
