@@ -34,9 +34,64 @@ Understanding the profound influence of belief in free will on job satisfaction 
 
 # Data 
 
-# Model 1
-## Model set-up
+# Study 1
+The dataset comprises responses gathered from surveys conducted within 54 branch offices of a publicly listed real-estate agency company in Taiwan. Two waves of surveys, separated by a 3-month time-lag, were administered to agents, resulting in a total of 293 returned questionnaires at Time 1 and 252 at Time 2, with a 74% response rate. The dataset encompasses several variables shedding light on agents' demographics, free will perception, and job satisfaction levels. Key variables include age (E_AGE), sex (E_SEX), free will perception, job satisfaction at Time 1 (JS), and job satisfaction at Time 2 (W2JS). Notably, age exhibits a mean of approximately 30.5 years at both time points, with a slight increase in the mean age at Time 2. Regarding sex distribution, the majority of respondents identify as male, comprising approximately 79-82% of the sample across both time points. 
+
+## Study 1-a set-up
+```{r}
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+```
+
+```{r}
+data <- read.csv("FW satisfaction-Study 1-data.csv")
+
+data <- na.omit(data)
+
+str(data)
+```
+
+```{r}
+ggplot(data, aes(x = freewill, y = JS)) +
+  geom_point(color = "blue") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Relationship between Free Will Belief and Job Satisfaction",
+       x = "Belief in Free Will",
+       y = "Job Satisfaction (Time 1)") +
+  theme_minimal()
+```
+```{r}
+ggplot(data, aes(x = freewill, y = W2JS)) +
+  geom_point(color = "blue") +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Relationship between Free Will Belief and Job Satisfaction",
+       x = "Belief in Free Will",
+       y = "Job Satisfaction (Time 2)") +
+  theme_minimal()
+```
 ### Model Justification
+In examining the scatter plots representing job satisfaction levels over Time 1 and Time 2, as well as the relationship between belief in free will and changes in job satisfaction over time, a notable trend emerges. The scatter plots depict a discernible upward trend, indicating that individuals with stronger convictions in free will tend to exhibit higher levels of job satisfaction. This observation is particularly evident in the second scatter plot, where the change in job satisfaction over time is plotted against the belief in free will. Here, the trendline illustrates a clear positive slope, suggesting that as belief in free will increases, so does job satisfaction.
+
+## Study 1-b set-up
+```{r}
+ggplot(data, aes(x = JS)) +
+  geom_histogram(fill = "skyblue", color = "black", bins = 20) +
+  labs(title = "Distribution of Job Satisfaction at Time 1",
+       x = "Job Satisfaction",
+       y = "Frequency") +
+  theme_minimal()
+
+ggplot(data, aes(x = W2JS)) +
+  geom_histogram(fill = "lightgreen", color = "black", bins = 20) +
+  labs(title = "Distribution of Job Satisfaction at Time 2",
+       x = "Job Satisfaction",
+       y = "Frequency") +
+  theme_minimal()
+```
+### Model Justification
+A comparison between job satisfaction at Time 1 and Time 2 shows a slight increase in satisfaction levels during Time 2, albeit not statistically significant. The distribution plot depicting job satisfaction at both time points illustrates a positive trend, with most data points shifting upwards from Time 1 to Time 2, indicating a general improvement in satisfaction over the 3-month period. This observation is further supported by the histograms, where the distribution of job satisfaction scores at Time 2 appears to be slightly shifted towards higher values compared to Time 1. While the difference may be subtle, it suggests a trend of increasing job satisfaction among agents over time within the surveyed branch offices. Additional statistical analysis could provide further insights into the significance and drivers of this observed change.
+
 
 # Model 2
 ## Model set-up
