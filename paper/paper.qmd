@@ -1,6 +1,6 @@
 ---
 title: "Belief in Free Will"
-subtitle: " A Catalyst for Long-Term Job Satisfaction in Workplace"
+subtitle: " A Catalyst for Long-Term Job Satisfaction in the Workplace"
 author: 
   - Hailey Jang
   - Joe Zhou
@@ -12,3 +12,38 @@ format: pdf
 number-sections: true
 bibliography: references.bib
 ---
+
+```{r}
+#| include: false
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(palmerpenguins)
+```
+
+# Introduction
+
+In today's dynamic and demanding work environments, the pursuit of job satisfaction is a fundamental aspect of individual well-being and organizational productivity. Central to this pursuit is the belief in personal freedom, an age-old philosophical concept that has garnered renewed attention for its potential practical implications. Extensive research has already established a significant correlation between the belief in free will and work performance, suggesting that this philosophical stance might offer tangible psychological benefits. However, while existing studies provide valuable insights, they often lack long-term investigation into the enduring relationship between belief in free will and job satisfaction. Addressing this gap, our research endeavors to explore the longitudinal association between these factors, shedding light on their lasting impact on individuals' satisfaction with their work.
+
+In our quest to delve deeper into this intriguing connection, we conducted two distinct yet complementary studies. Study 1 involved a cohort of 252 Taiwanese real-estate agents, meticulously tracked over a period of three months. Through comprehensive assessments, we examined the correlation between the participants' belief in free will and their reported levels of job satisfaction. Study 2 broadened the scope by focusing on 137 American workers engaged in an online labor market, monitored diligently over six months. Leveraging similar methodologies, we sought to corroborate and extend the findings from Study 1, thereby providing a robust understanding of the relationship between belief in free will and job satisfaction across diverse cultural and occupational contexts.
+
+Our findings unveil a compelling narrative: a consistent and positive relationship exists between the belief in free will and job satisfaction over extended periods of time. Both studies revealed that individuals who embrace the notion of personal freedom tend to experience higher levels of satisfaction in their professional endeavors. Remarkably, this association persisted even when accounting for other agency constructs, underscoring the unique and enduring impact of belief in free will on workplace contentment.
+
+Understanding the profound influence of belief in free will on job satisfaction holds profound implications for both individuals and organizations alike. By elucidating this enduring relationship, our research not only enriches scholarly discourse but also offers actionable insights for enhancing workplace well-being and productivity. This paper unfolds in three sections: first, we provide a comprehensive review of the literature on belief in free will and its implications for job satisfaction. Next, we detail the methodologies employed in our two longitudinal studies, followed by a presentation and analysis of our findings. Finally, we offer a nuanced discussion of the theoretical implications, practical applications, and avenues for future research in this burgeoning field.
+
+# Data 
+
+# Model 1
+## Model set-up
+### Model Justification
+
+# Model 2
+## Model set-up
+### Model Justification
+
+# Discussion 
+## discussion point
+
+
+# References
