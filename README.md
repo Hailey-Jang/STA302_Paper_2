@@ -1,6 +1,6 @@
 
 ## Overview
-Article: Feldman, G., Farh, J., & Wong, K. F. E. (2018). Agency beliefs over time and across cultures: Free will beliefs predict higher work satisfaction. Personality and Social Psychology Bulletin, 44, 304–317. DOI: 10.1177/0146167217739261. [Article] [Preprint] [Open materials/data/code]
+This research investigates the enduring relationship between belief in personal freedom and job satisfaction through two longitudinal studies. These findings underscore the significance of embracing personal freedom for enhancing workplace contentment, offering actionable insights for individuals and organizations striving to improve well-being and productivity.
 
 ## File Structure
 
