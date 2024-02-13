@@ -1,0 +1,14 @@
+---
+title: "Belief in Free Will"
+subtitle: " A Catalyst for Long-Term Job Satisfaction in Workplace"
+author: 
+  - Hailey Jang
+  - Joe Zhou
+thanks: "Code and data are available at: https://github.com/Hailey-Jang/STA302_Reproduction.git"
+date: 02-13-2024
+date-format: long
+abstract: "This paper investigates the long-term relationship between belief in personal freedom and job satisfaction through two longitudinal studies. Study 1 tracked 252 Taiwanese real-estate agents over 3 months, while Study 2 followed 137 American workers in an online labour market over 6 months. We found a consistent positive correlation between belief in free will and job satisfaction, even after accounting for other agency constructs. This research highlights the enduring impact of embracing personal freedom on workplace contentment, offering valuable insights for enhancing individual well-being and organizational productivity in diverse cultural and occupational settings."
+format: pdf
+number-sections: true
+bibliography: references.bib
+---
