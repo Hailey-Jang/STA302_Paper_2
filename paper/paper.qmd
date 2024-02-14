@@ -3,7 +3,6 @@ title: "Belief in Free Will"
 subtitle: " A Catalyst for Long-Term Job Satisfaction in the Workplace"
 author: 
   - Hailey Jang
-  - Joe Zhou
 thanks: "Code and data are available at: https://github.com/Hailey-Jang/STA302_Reproduction.git"
 date: 02-13-2024
 date-format: long
@@ -25,20 +24,19 @@ library(palmerpenguins)
 
 # Introduction
 
-In today's dynamic and demanding work environments, the pursuit of job satisfaction is a fundamental aspect of individual well-being and organizational productivity. Central to this pursuit is the belief in personal freedom, an age-old philosophical concept that has garnered renewed attention for its potential practical implications. Extensive research has already established a significant correlation between the belief in free will and work performance, suggesting that this philosophical stance might offer tangible psychological benefits. However, while existing studies provide valuable insights, they often lack long-term investigation into the enduring relationship between belief in free will and job satisfaction. Addressing this gap, our research endeavors to explore the longitudinal association between these factors, shedding light on their lasting impact on individuals' satisfaction with their work.
+In today's dynamic and demanding work environments, the pursuit of job satisfaction is a fundamental aspect of individual well-being and organizational productivity. Central to this pursuit is the belief in personal freedom, an age-old philosophical concept that has garnered renewed attention for its potential practical implications. Extensive research has already established a significant correlation between the belief in free will and work performance, suggesting that this philosophical stance might offer tangible psychological benefits. However, while existing studies provide valuable insights, they often lack long-term investigation into the enduring relationship between belief in free will and job satisfaction. Addressing this gap, our research endeavours to explore the longitudinal association between these factors, shedding light on their lasting impact on individuals' satisfaction with their work.
 
-In our quest to delve deeper into this intriguing connection, we conducted two distinct yet complementary studies. Study 1 involved a cohort of 252 Taiwanese real-estate agents, meticulously tracked over a period of three months. Through comprehensive assessments, we examined the correlation between the participants' belief in free will and their reported levels of job satisfaction. Study 2 broadened the scope by focusing on 137 American workers engaged in an online labor market, monitored diligently over six months. Leveraging similar methodologies, we sought to corroborate and extend the findings from Study 1, thereby providing a robust understanding of the relationship between belief in free will and job satisfaction across diverse cultural and occupational contexts.
+In our quest to delve deeper into this intriguing connection, we conducted two distinct yet complementary studies. Study 1 involved a cohort of 252 Taiwanese real-estate agents, meticulously tracked over a period of three months. Through comprehensive assessments, we examined the correlation between the participants' belief in free will and their reported levels of job satisfaction. Study 2 broadened the scope by focusing on 137 American workers engaged in an online labour market, monitored diligently over six months. Leveraging similar methodologies, we sought to corroborate and extend the findings from Study 1, thereby providing a robust understanding of the relationship between belief in free will and job satisfaction across diverse cultural and occupational contexts.
 
-Our findings unveil a compelling narrative: a consistent and positive relationship exists between the belief in free will and job satisfaction over extended periods of time. Both studies revealed that individuals who embrace the notion of personal freedom tend to experience higher levels of satisfaction in their professional endeavors. Remarkably, this association persisted even when accounting for other agency constructs, underscoring the unique and enduring impact of belief in free will on workplace contentment.
+Our findings unveil a compelling narrative: a consistent and positive relationship exists between the belief in free will and job satisfaction over extended periods. Both studies revealed that individuals who embrace the notion of personal freedom tend to experience higher levels of satisfaction in their professional endeavours. Remarkably, this association persisted even when accounting for other agency constructs, underscoring the unique and enduring impact of belief in free will on workplace contentment.
 
 Understanding the profound influence of belief in free will on job satisfaction holds profound implications for both individuals and organizations alike. By elucidating this enduring relationship, our research not only enriches scholarly discourse but also offers actionable insights for enhancing workplace well-being and productivity. This paper unfolds in three sections: first, we provide a comprehensive review of the literature on belief in free will and its implications for job satisfaction. Next, we detail the methodologies employed in our two longitudinal studies, followed by a presentation and analysis of our findings. Finally, we offer a nuanced discussion of the theoretical implications, practical applications, and avenues for future research in this burgeoning field.
 
 # Data 
 
-# Study 1
-The dataset comprises responses gathered from surveys conducted within 54 branch offices of a publicly listed real-estate agency company in Taiwan. Two waves of surveys, separated by a 3-month time-lag, were administered to agents, resulting in a total of 293 returned questionnaires at Time 1 and 252 at Time 2, with a 74% response rate. The dataset encompasses several variables shedding light on agents' demographics, free will perception, and job satisfaction levels. Key variables include age (E_AGE), sex (E_SEX), free will perception, job satisfaction at Time 1 (JS), and job satisfaction at Time 2 (W2JS). Notably, age exhibits a mean of approximately 30.5 years at both time points, with a slight increase in the mean age at Time 2. Regarding sex distribution, the majority of respondents identify as male, comprising approximately 79-82% of the sample across both time points. 
+# Job Satisfaction in Taiwan
+The dataset comprises responses gathered from surveys conducted within 54 branch offices of a publicly listed real-estate agency company in Taiwan. Two waves of surveys, separated by a 3-month time lag, were administered to agents, resulting in a total of 293 returned questionnaires at Time 1 and 252 at Time 2, with a 74% response rate. The dataset encompasses several variables shedding light on agents' demographics, free will perception, and job satisfaction levels. Key variables include age (E_AGE), sex (E_SEX), free will perception, job satisfaction at Time 1 (JS), and job satisfaction at Time 2 (W2JS). Notably, age exhibits a mean of approximately 30.5 years at both time points, with a slight increase in the mean age at Time 2. Regarding sex distribution, the majority of respondents identify as male, comprising approximately 79-82% of the sample across both time points. 
 
-## Study 1-a set-up
 ```{r}
 library(ggplot2)
 library(dplyr)
@@ -71,10 +69,8 @@ ggplot(data, aes(x = freewill, y = W2JS)) +
        y = "Job Satisfaction (Time 2)") +
   theme_minimal()
 ```
-### Model Justification
-In examining the scatter plots representing job satisfaction levels over Time 1 and Time 2, as well as the relationship between belief in free will and changes in job satisfaction over time, a notable trend emerges. The scatter plots depict a discernible upward trend, indicating that individuals with stronger convictions in free will tend to exhibit higher levels of job satisfaction. This observation is particularly evident in the second scatter plot, where the change in job satisfaction over time is plotted against the belief in free will. Here, the trendline illustrates a clear positive slope, suggesting that as belief in free will increases, so does job satisfaction.
+Interpreting Graphs 1 and 2, which are scatter plots depicting the relationship between belief in free will and job satisfaction, we observe a clear positive correlation between the two variables. The upward trend in both graphs suggests that individuals who hold stronger convictions in free will tend to report higher levels of job satisfaction. This relationship is particularly evident in Graph 2, where job satisfaction over time is plotted against belief in free will. The trendline in this graph shows a distinct positive slope, indicating that as belief in free will increases, so does job satisfaction. 
 
-## Study 1-b set-up
 ```{r}
 ggplot(data, aes(x = JS)) +
   geom_histogram(fill = "skyblue", color = "black", bins = 20) +
@@ -90,16 +86,15 @@ ggplot(data, aes(x = W2JS)) +
        y = "Frequency") +
   theme_minimal()
 ```
-### Model Justification
-A comparison between job satisfaction at Time 1 and Time 2 shows a slight increase in satisfaction levels during Time 2, albeit not statistically significant. The distribution plot depicting job satisfaction at both time points illustrates a positive trend, with most data points shifting upwards from Time 1 to Time 2, indicating a general improvement in satisfaction over the 3-month period. This observation is further supported by the histograms, where the distribution of job satisfaction scores at Time 2 appears to be slightly shifted towards higher values compared to Time 1. While the difference may be subtle, it suggests a trend of increasing job satisfaction among agents over time within the surveyed branch offices. Additional statistical analysis could provide further insights into the significance and drivers of this observed change.
+Furthermore, a notable observation arises when comparing job satisfaction levels between Time 1 and Time 2, highlighted in Graphs 3 and 4. Despite a relatively modest increase in satisfaction levels during Time 2, the change is not statistically significant. However, the distribution plots for both time points reveal a positive trend, with the majority of data points shifting upwards from Time 1 to Time 2. This shift is corroborated by the histograms, where the distribution of job satisfaction scores at Time 2 appears slightly skewed towards higher values compared to Time 1. While the difference may seem subtle, it suggests an overall trend of improving job satisfaction among surveyed branch offices over the three months. Further statistical analysis could offer deeper insights into the significance and underlying factors driving this observed change.
 
 
-# Model 2
-## Model set-up
-### Model Justification
+# Job Satisfaction in America
 
 # Discussion 
-## discussion point
+## Free Will and Job Satisfaction
+
+## Long-Term Effect of Free Will 
 
 
 # References
