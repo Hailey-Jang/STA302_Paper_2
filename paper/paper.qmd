@@ -45,6 +45,14 @@ library(tidyr)
 ```
 
 ```{r}
+#| echo: false
+#| eval: true
+#| label: fig-1
+#| fig-cap: "Relationship between Free Will Belief and Job Satisfaction (Time 1)"
+#| warning: false
+```
+
+```{r}
 data <- read.csv("FW satisfaction-Study 1-data.csv")
 
 data <- na.omit(data)
@@ -61,6 +69,15 @@ ggplot(data, aes(x = freewill, y = JS)) +
        y = "Job Satisfaction (Time 1)") +
   theme_minimal()
 ```
+
+```{r}
+#| echo: false
+#| eval: true
+#| label: fig-2
+#| fig-cap: "Relationship between Free Will Belief and Job Satisfaction (Time 2)"
+#| warning: false
+```
+
 ```{r}
 ggplot(data, aes(x = freewill, y = W2JS)) +
   geom_point(color = "blue") +
@@ -70,7 +87,15 @@ ggplot(data, aes(x = freewill, y = W2JS)) +
        y = "Job Satisfaction (Time 2)") +
   theme_minimal()
 ```
-Interpreting Graphs 1 and 2, which are scatter plots depicting the relationship between belief in free will and job satisfaction, we observe a clear positive correlation between the two variables. The upward trend in both graphs suggests that individuals who hold stronger convictions in free will tend to report higher levels of job satisfaction. This relationship is particularly evident in Graph 2, where job satisfaction over time is plotted against belief in free will. The trendline in this graph shows a distinct positive slope, indicating that as belief in free will increases, so does job satisfaction. 
+Interpreting (@fig-1) and (@fig-2), which are scatter plots depicting the relationship between belief in free will and job satisfaction, we observe a clear positive correlation between the two variables. The upward trend in both graphs suggests that individuals who hold stronger convictions in free will tend to report higher levels of job satisfaction. This relationship is particularly evident in (@fig-2), where job satisfaction over time is plotted against belief in free will. The trendline in this graph shows a distinct positive slope, indicating that as belief in free will increases, so does job satisfaction. 
+
+```{r}
+#| echo: false
+#| eval: true
+#| label: fig-3
+#| fig-cap: "Distribution of Job Satisfaction at Time 1"
+#| warning: false
+```
 
 ```{r}
 ggplot(data, aes(x = JS)) +
@@ -79,7 +104,15 @@ ggplot(data, aes(x = JS)) +
        x = "Job Satisfaction",
        y = "Frequency") +
   theme_minimal()
-
+```
+```{r}
+#| echo: false
+#| eval: true
+#| label: fig-4
+#| fig-cap: "Distribution of Job Satisfaction at Time 2"
+#| warning: false
+```
+```{r}
 ggplot(data, aes(x = W2JS)) +
   geom_histogram(fill = "lightgreen", color = "black", bins = 20) +
   labs(title = "Distribution of Job Satisfaction at Time 2",
@@ -87,7 +120,7 @@ ggplot(data, aes(x = W2JS)) +
        y = "Frequency") +
   theme_minimal()
 ```
-Furthermore, a notable observation arises when comparing job satisfaction levels between Time 1 and Time 2, highlighted in Graphs 3 and 4. Despite a relatively modest increase in satisfaction levels during Time 2, the change is not statistically significant. However, the distribution plots for both time points reveal a positive trend, with the majority of data points shifting upwards from Time 1 to Time 2. This shift is corroborated by the histograms, where the distribution of job satisfaction scores at Time 2 appears slightly skewed towards higher values compared to Time 1. While the difference may seem subtle, it suggests an overall trend of improving job satisfaction among surveyed branch offices over the three months. Further statistical analysis could offer deeper insights into the significance and underlying factors driving this observed change.
+Furthermore, a notable observation arises when comparing job satisfaction levels between Time 1 and Time 2, highlighted in (@fig-3)and (@fig-4). Despite a relatively modest increase in satisfaction levels during Time 2, the change is not statistically significant. However, the distribution plots for both time points reveal a positive trend, with the majority of data points shifting upwards from Time 1 to Time 2. This shift is corroborated by the histograms, where the distribution of job satisfaction scores at Time 2 appears slightly skewed towards higher values compared to Time 1. While the difference may seem subtle, it suggests an overall trend of improving job satisfaction among surveyed branch offices over the three months. Further statistical analysis could offer deeper insights into the significance and underlying factors driving this observed change.
 
 # Discussion 
 ## Free Will and Job Satisfaction
