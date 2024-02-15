@@ -1,16 +1,24 @@
 ---
 title: "Belief in Free Will"
+author: "Hailey Jang"
+date: "02-13-2024"
+output: pdf_document
 subtitle: " A Catalyst for Long-Term Job Satisfaction in the Workplace"
-author: 
-  - Hailey Jang
-thanks: "Code and data are available at: https://github.com/Hailey-Jang/STA302_Reproduction.git"
-date: 02-13-2024
 date-format: long
-abstract: "This paper investigates the long-term relationship between belief in personal freedom and job satisfaction through two longitudinal studies. Study 1 tracked 252 Taiwanese real-estate agents over 3 months, while Study 2 followed 137 American workers in an online labour market over 6 months. We found a consistent positive correlation between belief in free will and job satisfaction, even after accounting for other agency constructs. This research highlights the enduring impact of embracing personal freedom on workplace contentment, offering valuable insights for enhancing individual well-being and organizational productivity in diverse cultural and occupational settings."
+abstract: "This paper investigates the long-term relationship between belief in personal
+  freedom and job satisfaction through two longitudinal studies. Study 1 tracked 252
+  Taiwanese real-estate agents over 3 months, while Study 2 followed 137 American
+  workers in an online labour market over 6 months. We found a consistent positive
+  correlation between belief in free will and job satisfaction, even after accounting
+  for other agency constructs. This research highlights the enduring impact of embracing
+  personal freedom on workplace contentment, offering valuable insights for enhancing
+  individual well-being and organizational productivity in diverse cultural and occupational
+  settings."
 format: pdf
 toc: true
 number-sections: true
 bibliography: references.bib
+thanks: "Code and data are available at: https://github.com/Hailey-Jang/STA302_Reproduction.git"
 ---
 
 ```{r}
@@ -19,7 +27,12 @@ bibliography: references.bib
 #| message: false
 
 library(tidyverse)
-library(palmerpenguins)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+
+
+data <- read.csv("FW satisfaction-Study 1-data.csv")
 ```
 
 # Introduction
@@ -33,37 +46,24 @@ Our findings unveil a compelling narrative: a consistent and positive relationsh
 Understanding the profound influence of belief in free will on job satisfaction holds profound implications for both individuals and organizations alike. By elucidating this enduring relationship, our research not only enriches scholarly discourse but also offers actionable insights for enhancing workplace well-being and productivity. This paper unfolds in three sections: first, we provide a comprehensive review of the literature on belief in free will and its implications for job satisfaction. Next, we detail the methodologies employed in our two longitudinal studies, followed by a presentation and analysis of our findings. Finally, we offer a nuanced discussion of the theoretical implications, practical applications, and avenues for future research in this burgeoning field.
 
 # Data 
-R [@R], a statistical programming language, is exclusively used in this paper. To clean and prepare the data, the libraries dplyr [@dplyr], knitr [@knitr] are used. For the graphs, ggplot2 [@ggplot] is used. 
+This paper will replicate the data originally collected for the paper (2016) [@Feldman_Wong_Farh_2023]. R [@R], a statistical programming language, is exclusively used in this paper. To clean and prepare the data, the libraries dplyr [@tidyverse],[@dplyr], knitr [@knitr] are used. For the graphs, ggplot2 [@ggplot2] is used. 
 
-# Job Satisfaction in Taiwan
+# Results 
+## Job Satisfaction in Taiwan
 The dataset comprises responses gathered from surveys conducted within 54 branch offices of a publicly listed real-estate agency company in Taiwan. Two waves of surveys, separated by a 3-month time lag, were administered to agents, resulting in a total of 293 returned questionnaires at Time 1 and 252 at Time 2, with a 74% response rate. The dataset encompasses several variables shedding light on agents' demographics, free will perception, and job satisfaction levels. Key variables include age (E_AGE), sex (E_SEX), free will perception, job satisfaction at Time 1 (JS), and job satisfaction at Time 2 (W2JS). Notably, age exhibits a mean of approximately 30.5 years at both time points, with a slight increase in the mean age at Time 2. Regarding sex distribution, the majority of respondents identify as male, comprising approximately 79-82% of the sample across both time points. 
 
-```{r}
-library(ggplot2)
-library(dplyr)
-library(tidyr)
-```
+\newpage
 
 ```{r}
 #| echo: false
 #| eval: true
 #| label: fig-1
-#| fig-cap: "Relationship between Free Will Belief and Job Satisfaction (Time 1)"
+#| fig-cap: "Job Satisfaction (Time 1)"
 #| warning: false
-```
 
-```{r}
-data <- read.csv("FW satisfaction-Study 1-data.csv")
-
-data <- na.omit(data)
-
-str(data)
-```
-
-```{r}
+# Plot the raw data
 ggplot(data, aes(x = freewill, y = JS)) +
   geom_point(color = "blue") +
-  geom_smooth(method = "lm", se = FALSE, color = "red") +
   labs(title = "Relationship between Free Will Belief and Job Satisfaction",
        x = "Belief in Free Will",
        y = "Job Satisfaction (Time 1)") +
@@ -74,20 +74,20 @@ ggplot(data, aes(x = freewill, y = JS)) +
 #| echo: false
 #| eval: true
 #| label: fig-2
-#| fig-cap: "Relationship between Free Will Belief and Job Satisfaction (Time 2)"
+#| fig-cap: "Job Satisfaction (Time 2)"
 #| warning: false
-```
 
-```{r}
+# Plot the raw data
 ggplot(data, aes(x = freewill, y = W2JS)) +
   geom_point(color = "blue") +
-  geom_smooth(method = "lm", se = FALSE, color = "red") +
   labs(title = "Relationship between Free Will Belief and Job Satisfaction",
        x = "Belief in Free Will",
        y = "Job Satisfaction (Time 2)") +
   theme_minimal()
 ```
-Interpreting (@fig-1) and (@fig-2), which are scatter plots depicting the relationship between belief in free will and job satisfaction, we observe a clear positive correlation between the two variables. The upward trend in both graphs suggests that individuals who hold stronger convictions in free will tend to report higher levels of job satisfaction. This relationship is particularly evident in (@fig-2), where job satisfaction over time is plotted against belief in free will. The trendline in this graph shows a distinct positive slope, indicating that as belief in free will increases, so does job satisfaction. 
+
+\newpage
+Interpreting figure 1 and figure 2, which are scatter plots depicting the relationship between belief in free will and job satisfaction, we observe a clear positive correlation between the two variables. The upward trend in both graphs suggests that individuals who hold stronger convictions in free will tend to report higher levels of job satisfaction. This relationship is particularly evident in figure 2, where job satisfaction over time is plotted against belief in free will. The trend line in this graph shows a distinct positive slope, indicating that as belief in free will increases, so does job satisfaction. 
 
 ```{r}
 #| echo: false
@@ -95,9 +95,7 @@ Interpreting (@fig-1) and (@fig-2), which are scatter plots depicting the relati
 #| label: fig-3
 #| fig-cap: "Distribution of Job Satisfaction at Time 1"
 #| warning: false
-```
 
-```{r}
 ggplot(data, aes(x = JS)) +
   geom_histogram(fill = "skyblue", color = "black", bins = 20) +
   labs(title = "Distribution of Job Satisfaction at Time 1",
@@ -105,14 +103,14 @@ ggplot(data, aes(x = JS)) +
        y = "Frequency") +
   theme_minimal()
 ```
+
 ```{r}
 #| echo: false
 #| eval: true
 #| label: fig-4
 #| fig-cap: "Distribution of Job Satisfaction at Time 2"
 #| warning: false
-```
-```{r}
+
 ggplot(data, aes(x = W2JS)) +
   geom_histogram(fill = "lightgreen", color = "black", bins = 20) +
   labs(title = "Distribution of Job Satisfaction at Time 2",
@@ -120,7 +118,8 @@ ggplot(data, aes(x = W2JS)) +
        y = "Frequency") +
   theme_minimal()
 ```
-Furthermore, a notable observation arises when comparing job satisfaction levels between Time 1 and Time 2, highlighted in (@fig-3)and (@fig-4). Despite a relatively modest increase in satisfaction levels during Time 2, the change is not statistically significant. However, the distribution plots for both time points reveal a positive trend, with the majority of data points shifting upwards from Time 1 to Time 2. This shift is corroborated by the histograms, where the distribution of job satisfaction scores at Time 2 appears slightly skewed towards higher values compared to Time 1. While the difference may seem subtle, it suggests an overall trend of improving job satisfaction among surveyed branch offices over the three months. Further statistical analysis could offer deeper insights into the significance and underlying factors driving this observed change.
+
+Furthermore, a notable observation arises when comparing job satisfaction levels between Time 1 and Time 2, highlighted in figure 3 and figure 4 Despite a relatively modest increase in satisfaction levels during Time 2, the change is not statistically significant. However, the distribution plots for both time points reveal a positive trend, with the majority of data points shifting upwards from Time 1 to Time 2. This shift is corroborated by the histograms, where the distribution of job satisfaction scores at Time 2 appears slightly skewed towards higher values compared to Time 1. While the difference may seem subtle, it suggests an overall trend of improving job satisfaction among surveyed branch offices over the three months. Further statistical analysis could offer deeper insights into the significance and underlying factors driving this observed change.
 
 # Discussion 
 ## Free Will and Job Satisfaction
@@ -133,4 +132,7 @@ However, despite its strengths, the research also exhibits some weaknesses. For 
 
 Moving forward, future research should aim to address these limitations by conducting more extensive longitudinal studies across diverse populations and industries. Furthermore, exploring the underlying mechanism through which belief in free will influences job satisfaction could provide valuable insights for developing targeted interventions aimed at improving workplace well-being. Overall, this paper lays a solid foundation for further inquiry into the complex interplay between philosophical beliefs, psychological states, and organizational outcomes in the modern workplace. 
 
-# References
+\newpage
+
+# bibliography
+
