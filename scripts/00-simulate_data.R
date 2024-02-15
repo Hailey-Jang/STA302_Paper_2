@@ -1,6 +1,6 @@
 #### Preamble ####
 # Purpose: Simulates example data for study 1 
-# Author: Hailey Jang & Joe Zhou
+# Author: Hailey Jang
 # Date: 13 February 2024 
 # Contact: Hailey.Jang@mail.utoronto.ca
 # License: MIT
