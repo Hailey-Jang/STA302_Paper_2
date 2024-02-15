@@ -89,13 +89,15 @@ ggplot(data, aes(x = W2JS)) +
 ```
 Furthermore, a notable observation arises when comparing job satisfaction levels between Time 1 and Time 2, highlighted in Graphs 3 and 4. Despite a relatively modest increase in satisfaction levels during Time 2, the change is not statistically significant. However, the distribution plots for both time points reveal a positive trend, with the majority of data points shifting upwards from Time 1 to Time 2. This shift is corroborated by the histograms, where the distribution of job satisfaction scores at Time 2 appears slightly skewed towards higher values compared to Time 1. While the difference may seem subtle, it suggests an overall trend of improving job satisfaction among surveyed branch offices over the three months. Further statistical analysis could offer deeper insights into the significance and underlying factors driving this observed change.
 
-
-# Job Satisfaction in America
-
 # Discussion 
 ## Free Will and Job Satisfaction
+Through complementary studies involving Taiwanese real-estate agents in an online labour market, the research uncovers a consistent and positive relationship between belief in free will and job satisfaction over extended periods. This finding not only enriches our understanding of the psychological dynamics within the workplace but also highlights the enduring impact of philosophical perspectives on individual well-being. 
+
+One significant takeaway from this study is to confirmation of the enduring influence of belief in free will on job satisfaction. Despite fluctuations in external circumstances, individuals who embrace personal freedom consistently report higher levels of workplace contentment. This insight underscores the profound implications of philosophical perspectives on psychological states and organizational outcomes, suggesting that fostering a sense of agency may be a valuable strategy for enhancing workplace well-being.  
 
 ## Long-Term Effect of Free Will 
+However, despite its strengths, the research also exhibits some weaknesses. For instance, the relatively short duration of the longitudinal studies, spanning three to six months, may limit the generalizability of the findings. Additionally, while the use of real-world samples enhances ecological validity, it may also introduce confounding variables that are difficult to control for. 
 
+Moving forward, future research should aim to address these limitations by conducting more extensive longitudinal studies across diverse populations and industries. Furthermore, exploring the underlying mechanism through which belief in free will influences job satisfaction could provide valuable insights for developing targeted interventions aimed at improving workplace well-being. Overall, this paper lays a solid foundation for further inquiry into the complex interplay between philosophical beliefs, psychological states, and organizational outcomes in the modern workplace. 
 
 # References
